@@ -1,0 +1,121 @@
+/* General Body styling */
+body {
+    min-width: 300px;
+    font-family: 'Arial', sans-serif;
+    background-color: #00171F; /* Dark Blue background */
+    color: #FFFFFF; /* White text for contrast */
+    margin: 0;
+    padding: 10px;
+}
+
+/* Pin Button styling */
+#pinButton {
+    background: #00A8E8; /* Sky Blue for the pin button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#pinButton:hover {
+    background: #007EA7; /* Lighter Blue for hover effect */
+}
+
+#pinButton:focus {
+    outline: none;
+}
+
+/* Search Bar styling */
+#searchBar {
+    border: 1px solid #00A8E8; /* Sky Blue border */
+    padding: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 12px); /* Adjust width accounting for padding and border */
+}
+
+/* Card styling */
+.card {
+    background-color: #FFFFFF; /* White for cards */
+    border-left: 5px solid #007EA7; /* Light Blue border highlight */
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Soft shadow for depth */
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Darker shadow on hover */
+}
+
+/* Card Title and Link styling */
+.title, .link {
+    color: #003459; /* Medium Blue text */
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.link {
+    word-break: break-all; /* Prevents long URLs from overflowing */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Delete Button styling */
+.delete-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button img {
+    width: 20px;
+    height: 20px;
+    /* Adjust the filter to match Medium Blue color */
+    filter: brightness(0) saturate(100%) invert(22%) sepia(94%) saturate(749%) hue-rotate(189deg) brightness(92%) contrast(89%);
+}
+
+/* Feedback Message styling */
+.feedback-message {
+    text-align: center;
+    background-color: #007EA7; /* Light Blue background */
+    color: #FFFFFF; /* White text */
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: none; /* Hidden by default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    body {
+        padding: 5px;
+    }
+
+    .card {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    .title, .link {
+        margin-bottom: 5px; /* Spacing between elements when stacked */
+    }
+
+    .delete-button img {
+        margin-top: 5px; /* Additional space for delete button on small screens */
+    }
+}
